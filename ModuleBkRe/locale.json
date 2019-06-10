@@ -1,0 +1,20 @@
+{
+     "translations": {
+        "de": {
+        	"Mode":"Modus",
+        	"Backup":"Sichern",
+        	"Restore":"Wiederherstellen",
+        	"Module InstanceID":"Module InstanzID",
+        	"Create Instance if not selected":"Erstelle neue Instanz wenn keine gewählt",
+        	"Restore instance name":"Stelle Instanzname wieder her",
+        	"Execute restore":"Wiederherstellung ausführen",
+        	"Execute backup":"Sicherung ausführen",
+       		"Restore module mismatch. Require":"Restore Klasse stimmt nicht überein. Benötigt",
+        	
+        	"Instance %s not found":"Instanz %s nicht gefunden",
+        	"No backup found":"Kein Backup vorhanden",
+        	"Current backup class":"Gesicherte Klasse",
+        	"Backup instance name":"Gesicherter Name"
+        }
+    }
+}
