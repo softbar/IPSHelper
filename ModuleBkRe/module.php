@@ -1,71 +1,13 @@
 <?php
+define('IPS_VERSION',IPS_GetKernelVersion());
 /**
  * @author Xavier
  *
  */
-define('IPS_VERSION',IPS_GetKernelVersion());
-
-if(IPS_VERSION<4.3){
-	trait Translate {
-		private $langcache=null;
-		public function Translate($Text){
-			return $Text;
-		}
-	
-	}
-}else{
-	trait Translate {
-		
-	}
-	
-}
 class ModuleBackupRestore extends IPSModule {
-	use Translate;
+
 	private $MaxBackups = 5;
 	
-	private function fixFormVersion(&$form, $Version=IPS_VERSION){
-		if($Version >5.0)return;
-		if($Version==5.0)return;
-
-		$fixCaption=function(&$e)use($Version){
-			if($Version<5 && isset($e['caption'])){
-				$e['label']=$e['caption'];
-				unset($e['caption']);
-			}
-		};
-		if($Version<5){
-			for($j=0;$j<count($form['elements']);$j++){
-				$element=&$form['elements'][$j];
-				if($element['type']=='RowLayout'){
-					array_splice($form['elements'], $j,null,$element['items']);
-				}elseif($element['type']=='PopupButton'){
-					array_splice($form['elements'], $j,null,$element['items']);
-				}
-			}
-		}
-		if(!empty($form['elements']))foreach($form['elements'] as &$element){
-			if($element['type']=='Button')$fixCaption($element);
-			if($element['type']=='List' && isset($element['columns'])){
-				foreach($element['columns'] as &$column){
-					$fixCaption($column);					
-				}
-			}
-		}
-		if(!empty($form['actions'])){
-			foreach($form['actions'] as $j=>&$element){
-				if($element['type']=='Button')$fixCaption($element);
-				if($element['type']=='List' && isset($element['columns'])){
-					foreach($element['columns'] as &$column){
-						$fixCaption($column);					
-					}
-				}
-				if($element['type']=='TestCenter'){
-					unset($form['actions'][$j]);
-				}
-			}
-			$form['actions']=array_values($form['actions']);
-		}
-	}
 	
 	/**
 	 * {@inheritDoc}
@@ -81,14 +23,6 @@ class ModuleBackupRestore extends IPSModule {
 			$this->RegisterAttributeString('Data', '');
 		else $this->RegisterPropertyString('Data', '');
 	}
-	/**
-	 * {@inheritDoc}
-	 * @see IPSModule::ApplyChanges()
-	 */
-	public function ApplyChanges(){
-		parent::ApplyChanges();
-  	}
-	
   	/**
   	 * {@inheritDoc}
   	 * @see IPSModule::GetConfigurationForm()
@@ -231,7 +165,7 @@ class ModuleBackupRestore extends IPSModule {
 			return empty($list[$Index])?null:$list[$Index];
 		}
 	}
-	
-	
 }
+
+
 ?>

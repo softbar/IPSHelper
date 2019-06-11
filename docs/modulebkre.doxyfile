@@ -791,7 +791,7 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = C:\IP-Symcon\modules\IPSHelper\README.md C:\IP-Symcon\modules\IPSHelper\README_DE.md C:\IP-Symcon\modules\IPSModule.php C:\IP-Symcon\modules\IPSHelper\ModuleBkRe 
+INPUT                  = C:\IP-Symcon\modules\IPSHelper\README.md C:\IP-Symcon\modules\IPSHelper\README_DE.md C:\IP-Symcon\modules\IPSModule.php C:\IP-Symcon\modules\IPSHelper\ModuleBkRe
 
 # This tag can be used to specify the character encoding of the source files
 # that doxygen parses. Internally doxygen uses the UTF-8 encoding. Doxygen uses
@@ -1612,7 +1612,7 @@ MATHJAX_CODEFILE       =
 # The default value is: YES.
 # This tag requires that the tag GENERATE_HTML is set to YES.
 
-SEARCHENGINE           = YES
+SEARCHENGINE           = NO
 
 # When the SERVER_BASED_SEARCH tag is enabled the search engine will be
 # implemented using a web server instead of a web client using Javascript. There
