@@ -1,7 +1,7 @@
 {  
 	"id": "{5638FDC0-C110-4113-DE01-201905120000}",  
 	"author": "Xaver Bauer",
-	"name": "Xavers IPS Helper Module",
+	"name": "IPS Helper Module",
 	"url": "https://github.com/softbar/IpsHelper/",
 	"compatibility": {
 		"version": "4.2",
