@@ -9,12 +9,17 @@
         	"Restore instance name":"Stelle Instanzname wieder her",
         	"Execute restore":"Wiederherstellung ausführen",
         	"Execute backup":"Sicherung ausführen",
+        	"Delete backup %s":"Lösche Backup %s",
        		"Restore module mismatch. Require":"Restore Klasse stimmt nicht überein. Benötigt",
         	
         	"Instance %s not found":"Instanz %s nicht gefunden",
         	"No backup found":"Kein Backup vorhanden",
-        	"Current backup class":"Gesicherte Klasse",
-        	"Backup instance name":"Gesicherter Name"
+        	"Current backup class : %s":"Gesicherte Klasse : %s",
+        	"Backup instance name : %s":"Gesicherter Name : %s",
+        	"Instance \"(%s) %s\" created":"Instanze \"(%s) %s\" erstellt",
+        	"Instance \"(%s) %s\" saved. Please reload form!":"Instance \"(%s) %s\" gespeichert. Bitte formular neu laden!",
+        	"Backup of \"(%s) %s\" deleted. Please reload form!":"Backup von \"(%s) %s\" gelöscht. Bitte Formular neu laden!",
+        	"Error":"Fehler"
         }
     }
 }

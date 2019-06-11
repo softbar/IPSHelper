@@ -1,6 +1,6 @@
 {
 	"elements":[
-        { "name": "Mode",			"type": "Select",	"caption": "Mode",  "options": [
+		{ "name": "Mode",			"type": "Select",	"caption": "Mode",  "options": [
                 { "label": "Backup", "value": 0},
                 { "label": "Restore", "value": 1}
             ]
